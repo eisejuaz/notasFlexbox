@@ -1,16 +1,43 @@
-div
+create div
 
 add display: flexbox;
 
-main axis ---> horizontal
+main axis + cross axis
 start (left) end (right)
 
-cross axis ---> vertical
-
-begins placing at the top-left
+begins placing at the top-left.
 
 how to define main axis:
     flex-direction: row/ row-reversed;
                     column / column-reversed;
 
-flex-wrap: wrap/ no-wrap; using wrap you avoid scroll bars
+flex-wrap: wrap/ no-wrap; using wrap you avoid scroll bars if div is bigger than viewport.
+
+three properties: (research)
+    1. flex-basis: 500px; <-- example. default is 'auto'. space used if needed to occupy (?) it usually goes by 'auto' or '0'.
+
+    2. flex-grow: 4; <-- example. default is '0'. free space proportion. it sums the 'grow' of grow divs and assigns a fraction to each. grow 1 + grow 3 = 4, so the grow 3 will use 3/4 and grow 1 will use 1/4 of free space.
+
+    3. flex-shrink: 3; <-- example. default is '0'. it's the opposite behavior to flex-grow.
+
+shorthand for these three properties ---> flex.
+
+flex: 0 0 auto; means grow 0, shrink 0, basis auto.
+
+flex: 2; means flex: 2 2 0.
+
+to divide free space rather than increase/decrease element size you use 'justify-contents'.
+
+    justify-contents: flex-start / flex-end; it puts elements against one border or the other of their parent.
+
+    justify-contents: center; groups it in the center of parent element.
+
+    justify-contents: space-around; 
+
+    justify-contents: space-evenly; space between elemnts is equal.
+
+    justify-contents: space-between; sticks left to left, right to right.
+
+align-items: stretch; <-- default. it makes elements as high as parent.
+
+align-items: flex-start / flex-end / center;
