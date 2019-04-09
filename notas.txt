@@ -1,0 +1,16 @@
+div
+
+add display: flexbox;
+
+main axis ---> horizontal
+start (left) end (right)
+
+cross axis ---> vertical
+
+begins placing at the top-left
+
+how to define main axis:
+    flex-direction: row/ row-reversed;
+                    column / column-reversed;
+
+flex-wrap: wrap/ no-wrap; using wrap you avoid scroll bars
